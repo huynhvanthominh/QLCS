@@ -1,6 +1,7 @@
 import style from "./list-material-type.module.css"
 import Table from "./../../../themes/table/table"
 const ListMaterialType = () => {
+  console.log("list material type");
     const data = [
         {
           userId: 1,
@@ -125,7 +126,6 @@ const ListMaterialType = () => {
           body: "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo",
         },
       ];
-    
       const handleClick = (data) => {
         console.log(data);
       };

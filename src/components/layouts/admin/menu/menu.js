@@ -25,12 +25,12 @@ const Menu = () => {
           >
             <div className="accordion-body">
               <div>
-                <Link to={`${path}/QLCSVC/List-menu-type`}>
+                <Link to={`${path}/QLCSVC/List-material-type`}>
                   Danh sách vật chất
                 </Link>
               </div>
               <div>
-                <Link to={`${path}/QLCSVC/Add-menu-type`}>
+                <Link to={`${path}/QLCSVC/Add-material-type`}>
                   Thêm vật chất
                 </Link>
               </div>
@@ -46,7 +46,7 @@ const Menu = () => {
               data-bs-target="#material-type"
               aria-controls="collapseOne"
             >
-              Vật chất
+              Loại Vật chất
             </button>
           </h2>
           <div
