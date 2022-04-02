@@ -4,7 +4,6 @@ import ListMaterialType from "./list-material-type/list-material-type";
 
 const IndexQLCSVC = () => {
   const { path, url } = useRouteMatch();
-  console.log("index QLCSVC");
   return (
     <Switch>
       <Route exact path={path}>

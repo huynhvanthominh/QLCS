@@ -1,7 +1,6 @@
 import style from "./list-material-type.module.css"
 import Table from "./../../../themes/table/table"
 const ListMaterialType = () => {
-  console.log("list material type");
     const data = [
         {
           userId: 1,
