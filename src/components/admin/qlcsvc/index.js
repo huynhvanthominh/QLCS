@@ -4,15 +4,16 @@ import ListMaterialType from "./list-material-type/list-material-type";
 
 const IndexQLCSVC = () => {
   const { path, url } = useRouteMatch();
+  const materialType = path + "/Material-Type";
   return (
     <Switch>
       <Route exact path={path}>
-        <Redirect to={`${path}/List-material-type`} />
+        <Redirect to={materialType} />
       </Route>
-      <Route path={`${path}/List-material-type`}>
+      <Route path={`${path}/Material-Type`}>
         <ListMaterialType />
       </Route>
-      <Route path={`${path}/Add-material-type`}>
+      <Route path={`${path}/Material`}>
         <AddMaterialType />
       </Route>
     </Switch>
