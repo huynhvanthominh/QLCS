@@ -1,18 +1,18 @@
-import Header from "./header/header";
-import Menu from "./menu/menu";
-import style from "./layout-admin.module.css";
+import Header from "./header";
+import Menu from "./menu";
+import "../../../css/component/layout-admin.scss"
 
 const LayoutAdmin = ({ children }) => {
   return (
-    <div className={style.layout}>
-      <div className={style.menu}>
+    <div className="layout-admin">
+      <div className="menu">
         <Menu />
       </div>
-      <div className={style["header-main"]}>
-        <div className={style.header}>
+      <div className="header-main">
+        <div className="header">
           <Header />
         </div>
-        <div className={style.main}>{children}</div>
+        <div className="main">{children}</div>
       </div>
     </div>
   );

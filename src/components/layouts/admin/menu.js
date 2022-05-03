@@ -7,7 +7,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import DraftsIcon from "@mui/icons-material/Drafts";
+// import DraftsIcon from "@mui/icons-material/Drafts";
 import SendIcon from "@mui/icons-material/Send";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -16,7 +16,8 @@ import { Link, useRouteMatch } from "react-router-dom";
 
 export default function Menu() {
   const { path } = useRouteMatch();
-  const materialType = path + "/QLCSVC/Material-Type";
+  const materialType = path + "Material-Type";
+  const material = path + "Material";
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -34,9 +35,9 @@ export default function Menu() {
     >
       <ListItem
         button
-        component={(props) => (
-          <Link {...props} to={materialType}></Link>
-        )}
+        component={React.forwardRef((props, ref) => (
+          <Link {...props} ref={ref} to={materialType}></Link>
+        ))}
       >
         <ListItemIcon>
           <SendIcon />
@@ -45,9 +46,9 @@ export default function Menu() {
       </ListItem>
       <ListItem
         button
-        component={(props) => (
-          <Link {...props} to={`${path}/Material`}></Link>
-        )}
+        component={React.forwardRef((props, ref) => (
+          <Link {...props} ref={ref} to={material}></Link>
+        ))}
       >
         <ListItemIcon>
           <SendIcon />
@@ -71,6 +72,6 @@ export default function Menu() {
           </ListItemButton>
         </List>
       </Collapse>
-    </List>
+    </List >
   );
 }
